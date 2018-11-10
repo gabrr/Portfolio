@@ -1,0 +1,29 @@
+.grid-container{
+    display: grid;
+    grid-template: repeat( 7, 360px) / repeat(12, 1fr);
+}
+
+.grid-container > div {
+    background-color: #fff;
+    grid-gap: 0;
+}
+
+#about{
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+}
+.skills-section{
+    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+    grid-column: 1 / -1;
+    grid-row: 3 / span 2;
+}
+#portfolio{
+    grid-column: 1 / -1;
+    grid-row: 5 / span 1;
+    background-color: #fff;
+}
+#contact{
+    grid-column: 1 / -1;
+    grid-row: 6 / span 2;
+    background-color: #efefef;
+}
