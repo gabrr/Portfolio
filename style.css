@@ -15,10 +15,11 @@ html, body{
 /** disable scroll bar for small devices **/
 @media screen and(max-width:768px){
     ::-webkit-scrollbar {width: 0;}
+    
 }
 
 /**  font-family: 'ABeeZee', sans-serif;  **/
-h1{
+h1, h2{
     font-family: 'ABeeZee', sans-serif;
     font-weight: bolder;
 }
@@ -31,7 +32,7 @@ p{
 .hero{
     width: 100%;
     height: 100vh;
-    background-image: url(img/pexels-photo-459654.jpeg);
+    background-image: url(img/img7.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -139,9 +140,10 @@ nav{
     position: fixed;
     right: 0;
     top: 0;
-    background-image: linear-gradient(to top, #aaaaaa, #e0e0e0) ;
+    background-color: #ff8a7f;
     padding: 15px 14px 23px 27px;
     border-bottom-left-radius: 100%;
+    transition: .6s;
     z-index: 2;
 }
 
@@ -198,6 +200,7 @@ nav{
 .hero-main-text{
     margin: 25vh 8%;
     text-align: left;
+    position: relative;
 }
 .hero-main-text h1{
     font-size: 50px;
@@ -205,13 +208,6 @@ nav{
     letter-spacing: -2px;
     color: #444;
     font-family: 'ABeeZee', sans-serif;
-}
-/***   The text for .hero text,  &&   TYPIING  "DESKTOP VERSION"   ***/
-
-@media screen and (min-width: 768px){
-    .hero-main-text h1{
-        font-size: 65px;
-    }
 }
 
 /*** typing animation for mobile devices***/
@@ -262,7 +258,55 @@ p.text2{
     88%{width: 170px;}
     100% {width: 0;}
 }
-/** what is default is going set in here **/
+
+/***   The text for .hero text,  &&   TYPIING  "DESKTOP VERSION"   ***/
+@media only screen and (min-width: 768px){
+    .hero-main-text{
+        margin-top: 21vh;
+        text-align: center;
+    }
+    .auto-typing-effect{
+        margin: 15px 0 0 32vw;
+    }
+    .auto-typing-effect p{
+        font-size: 21px;
+    }
+    
+    /** the typewriter effect has diffrent sets for larger devices**/
+    @keyframes typewriter1{
+    0% {width: 0;}
+    10% {width: 0;}
+    40% {width: 205px;}
+    47% {width: 205px;}
+    55%{width: 0;}
+    100% {width: 0;}
+}
+    @keyframes typewriter2{
+        0% {width: 0;}
+        60% {width: 0;}
+        76%{ width: 203px;}
+        88%{width: 203px;}
+        100% {width: 0;}
+    }
+}
+/*****  THE UP ANGLE  ******/
+.toggle-bottom{
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    animation: upAndDown 3s .6s infinite ease-in-out;
+    transform: translateX(-50%);
+    top: 38vh;
+}
+@keyframes upAndDown{
+    0%{top: 38vh;}
+    20%{top: 36vh;}
+    30%{top: 38vh;}
+    100%{top: 38vh;}
+}
+
+
+/** what is default is going to be set in here **/
 .grid-container{
     color: #555;
     font-size: 1.1em;
@@ -270,7 +314,6 @@ p.text2{
 .grid-container p{
     text-align: left;
     font-size: 16px;
-    color: #555;
     letter-spacing: .15px;
     word-spacing: .1px;
 }
@@ -285,7 +328,7 @@ p.text2{
 #about{
     position: relative;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 /*** circle design ***/
 #about .circle-graphic{
@@ -305,12 +348,35 @@ p.text2{
     transform: rotate(8deg);
     filter: brightness(109%);
     margin-top: 50px;
-    margin-right: 65%;
+    margin-left: 65%;
+}
+
+/*** ABOUT  design DESKTOP VERSION ***/
+@media screen and (min-width:768px){
+    #about .circle-graphic{
+        height: 903px;
+        width: 1000px;
+        left: -36%;
+        position: absolute;
+        margin-top: -423px;
+        border-radius: 100%;
+        background-color: rgba(255, 0, 0, .05);
+    }
+    #about h1{
+    margin: 160px 0 20px 8%;
+    }
+    #about p{
+        width: 43%;
+    }
+    #about img{
+        max-width: 24%;
+        margin-top: -50px;
+    }
 }
 
 /** starts the SKILLS SECTION  ***/
 .skills-section h1{
-    margin: 80px 0 40px 8%;
+    margin: 80px 0 60px 8%;
 }
 .skills-section p{
     font-size: 12px;
@@ -321,7 +387,7 @@ p.text2{
     position: relative;
     width:  86%;
     height: 20px;
-    margin: 10px auto 26px;
+    margin: 10px auto 40px;
     border-radius: 30px;
     background-color: rgba(255, 0, 0, .05);
 }
@@ -339,25 +405,188 @@ p.text2{
     border-radius: 30px;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, #bb0e0e, #ff0c0c);
+    background-image: linear-gradient(to bottom, #ff8a7f, #ff8a7f);
     transition: 1s all;
+}
+/*** SKILLS SECTION the desktop version **/
+@media screen and (min-width:768px){
+    .skills-section h1{
+        margin: 80px 0 60px 20%;
+}
+    .skills-section p{
+        margin-left: 20%;
+    }
+    .out-percentage-bar{
+        width: 60%;
+    }
 }
 
 
+/****  Starts the PORTFOLIO SECTION  ****/
+#portfolio{
+    transition: 2s;
+    color: #efefef;
+    overflow: hidden;
+}
+#portfolio img{
+    filter: grayscale(100%) brightness(97%);
+}
+#portfolio h1{
+    margin: 10px 0 60px;
+}
+#portfolio h2{
+    font-size: 20px;
+}
+#portfolio p{
+    font-size: 13px;
+}
+#portfolio-content{
+    overflow: hidden;
+    opacity: 0;
+    transition: 1.3s;
+    width: 84%;
+    height: 100%;
+    margin-top: 140px;
+    margin-left: 20%;
+}
+/** portfolio project 1 ***/
+#portfolio-content .img-holder{
+    perspective: 1200px;
+    perspective-origin: right;
+}
+#portfolio-content .img-holder img{
+    width: 100%;
+    height: auto;
+    margin:  0 3% 39px;
+    transform: rotateY(0deg);
+    transform-origin: left;
+    border-radius: 7px;
+}
+/** portfolio project 2 ***/
+#portfolio-content .img-holder2{
+    width: 100%;
+    height: 570px;
+    perspective: 1200px;
+    perspective-origin: right;
+    position: relative;
+}
+
+#portfolio-content .img-holder2 img{
+    margin: 110px 4% 70px;
+    width: 55%;
+    height: auto;
+    display: inline-block;
+    transform: rotateY(40deg);
+    transform-origin: left;
+    border-radius: 7px;
+    position: absolute;
+}
+.rogers-pic{
+}
+.rogers-pic2{
+    top: 11%;
+}
+.subtitle-portfolio{
+    position: absolute;
+    bottom: 0;
+}
+
+/****   PORTFOLIO DESKTOP VERSION DESIGN ****/
 
 
 
+/***  start the CONTACT ***/
+#contact{
+    transition: 2s;
+}
+#contact .contact-links h1{
+    color: #efefef;
+    margin: 230px 8% 35px;
+}
+#contact .contact-links p{
+    margin: 30px 0 5px 8%;
+    color: #666;
+}
+#contact a{
+    font-size: 20px;
+    padding: 10px 0 20px;
+    margin-left: 8%;
+    color: #efefef;
+    text-decoration: none;
+}
+/*****   starts the FORM FOR CONTACTS  ******/
+
+#contact-form{
+    margin-top: 50px;
+    text-align: center;
+}
+input:read-write, #message-form{
+    padding-left: 10px;
+    color: #888;
+    font-size: 15px;
+}
+#text-form{
+    width: 84%;
+    height: 40px;
+    margin: 5px auto;
+    border-radius: 5px;
+    background-color: #222;
+}
+#email-form{
+    width: 84%;
+    height: 40px;
+    margin: 5px auto;
+    border-radius:  5px;
+    background-color: #222;
+}
+#message-form{
+    width: 84%;
+    height: 150px;
+    margin: 5px auto;
+    border-radius: 7px;
+    background-color: #222;
+}
+button{
+    width: 30%;
+    margin: 20px auto 0;
+    height: 42px;
+    border-radius: 5px;
+    color: #555;
+    font-size: 14px;
+    background-color: #efefef;
+}
+/***  social medias ***/
 
 
+.social-medias{
+    margin: 120px 0 0 0;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-color: #efefef;
+}
+.social-medias a{
+    margin: 15px;
+    padding: 15px;
+    color: #555;
+}
+.links-social-medias li{
+    display: inline-block;
+}
+.links-social-medias{
+    margin: 50px auto 0;
+    
+}
 
+/***  FOOTER  ***/
 
-
-
-
-
-
-
-
+.footer p{
+    text-align: center;
+    margin: 30px auto 5px;
+    padding: 0;
+    width: 84%;
+    font-size: 15px;
+}
 
 
 

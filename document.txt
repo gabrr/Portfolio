@@ -124,8 +124,8 @@ break;
 //It's 15:05 and I finished it. Next step the tech section, and this one going to take much more time because I will, look for icons and make a few researches.
 
 //It's 17:30 I complete the skills section. Now I'm gonna give a break;
-break;
 
+break;
 
 // It's 11:20 AM, 11.11.2018. I am having a problem with CSS grid, for some reason the toggler is moving out of the screen, it seems like last square increases ...
 
@@ -134,3 +134,39 @@ break;
 break;
 
 // It's 14:10 I'm again.
+
+// It's 14:50 and I debugged it successfully.
+
+// I have made few changes in color pallet to things match better. Now I'm looking for inspirations for a Portfolio page that fits well with my design language.
+
+
+//It's 19:12, I finished lots of new animations, new elements and as well as the new section portfolio.
+for some reason the section portfolio, it doesn't look too good I may change something.
+
+//break;
+
+// It's 20:05, I came back, because I had some new ideas, and I don't want to forget.
+
+
+// It's 22:00, I finished my idea. It was crazily hard, but it works very nice. but now a weird line appears at the bottom of the section.
+
+// 23:03 It's very annoying that line. I took out but it seems like it's still wrong  and maybe that may causes an issue but I made several tests and everything seems okay.
+
+// 01:14 AM,  the mobile version is almost completed, but now it's been hard to align anchor items. 
+
+// 1:56 AM Done!! at least the mobile version. Later I'll need to seek for bugs and make it responsible for larger devices.
+
+// Yeeaah it's 17:25, 13.11.2018. I'm back I am going to try to finish this today.
+
+
+
+
+
+
+
+
+
+
+
+
+

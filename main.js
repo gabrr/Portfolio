@@ -19,8 +19,10 @@ $(document).ready(function(){
        $(window).scroll(function(){
            parallax();
            skillsBarsAnimation();
+           DarkeningBackground();
        }); 
-    });
+});
+
     function parallax(){
     var Hwindow = $(window).scrollTop(); 
         //parallax on hero background image
@@ -30,18 +32,34 @@ $(document).ready(function(){
         $(".hero-main-text").css("margin-top", (25+Hwindow*-0.3)+"vh");
         
         var WidthWindow = window.innerWidth;
-        var SmallDevicesW = 1024;
+        var midDevicesW = 1024;
+        var SmallDevicesW = 768;
         
         //disable for devices with less than 1024 px;
-        if(WidthWindow < SmallDevicesW){
+        if(WidthWindow <= midDevicesW){
             $(".hero").css("background-position", "top");
         }
-        //parallax for the picture on about section and the red ball.
+        
+        //parallax for the picture on ABOUT section and the red ball.
         $("#about img").css("margin-left", (65+Hwindow*-0.023)+"%");
         $("#about .circle-graphic").css("left", (-36+Hwindow*0.022)+"%");
         
+        //on wider screens it will have different values
+        if(WidthWindow >= SmallDevicesW){
+            $("#about img").css("margin-left", (86+Hwindow*-0.023)+"%");
+            $("#about .circle-graphic").css("left", (-22+Hwindow*0.022)+"%");
+        }
         
-    }
+        
+        
+        
+        //parallax for the SECTION PORTFOLIO, it will make the images rotate
+        $("#portfolio-content .img-holder img").css("transform", "rotateY("+ 10+Hwindow*0.027 +"deg)");
+        $("#portfolio-content .img-holder2 img").css("left", (-36+Hwindow*0.018)+"%");
+        $("#portfolio-content .rogers-pic").css("left", (-36+Hwindow*0.015)+"%");
+        $("#portfolio-content .rogers-pic2").css("left", (86+Hwindow*-0.015)+"%");
+       
+}
 
 //Skills section animation ACCORDING TO THE USER SCROLLING EVENT
 
@@ -57,7 +75,7 @@ $(document).ready(function(){
         progressBar4 = document.getElementsByClassName("percentages-bar")[3];
         progressBar5 = document.getElementsByClassName("percentages-bar")[4];
     
-        if(skillSection < triggleTop){
+        if(skillSection < triggleTop+200){
         progressBar1.style = "width: 76%;"
         progressBar2.style = "width: 64%;"
         progressBar3.style = "width: 88%;"
@@ -71,6 +89,27 @@ $(document).ready(function(){
         progressBar5.style = "width: 35%;"    
         }
 }
+
+//Change the PORTFOLIO SECTION BACKGROUND
+    function DarkeningBackground(){
+        var triggleTop = $(document).scrollTop();
+        var portfolioTop = document.getElementById("portfolio").offsetTop;
+        var barsColorTransform = document.querySelector("#nav-toggle").children;
+        
+        if(triggleTop+200 > portfolioTop){
+            $("#portfolio").css("background-color", "#000");
+            $("#contact").css("background-color", "#000");
+            
+            $("#portfolio-content").css("opacity", "1");
+            $("#portfolio-content").css("margin-left", "8%");
+            $("#nav-toggle").css("background-color", "#dedede");
+            $(barsColorTransform).css("background-color", "#666");
+        } 
+        else if(portfolioTop+100 > triggleTop) {
+            $("#nav-toggle").css("background-color", "#ff8a7f");
+            $(barsColorTransform).css("background-color", "#efefef");
+        }
+    }
     
 
     
