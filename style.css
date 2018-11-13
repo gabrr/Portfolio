@@ -9,7 +9,7 @@ html, body{
 /**  scroll bar styling  **/
 ::-webkit-scrollbar {width: 6px;}
 ::-webkit-scrollbar-track { }
-::-webkit-scrollbar-thumb {background: #dfdfdf;border-radius: 2px;}
+::-webkit-scrollbar-thumb {background: #dfdfdf;}
 ::-webkit-scrollbar-thumb:hover {background: #777;}
 
 /** disable scroll bar for small devices **/
