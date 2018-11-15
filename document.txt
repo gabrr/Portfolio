@@ -159,7 +159,10 @@ for some reason the section portfolio, it doesn't look too good I may change som
 // Yeeaah it's 17:25, 13.11.2018. I'm back I am going to try to finish this today.
 
 
+// wow today was intense, very intense!!! it's pretty challenging to make a layout from nothing, I cannot use any program for setting a layout, separate for mobile tablet and desktop. I made the three first sections responsive but the others, I gotta make tomorrow. 
+It's 20:16.
 
+// It's 01:26 AM, 15.11.2018 I am gonna try to make the portfolio section today.
 
 
 

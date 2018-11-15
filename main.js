@@ -55,9 +55,8 @@ $(document).ready(function(){
         
         //parallax for the SECTION PORTFOLIO, it will make the images rotate
         $("#portfolio-content .img-holder img").css("transform", "rotateY("+ 10+Hwindow*0.027 +"deg)");
-        $("#portfolio-content .img-holder2 img").css("left", (-36+Hwindow*0.018)+"%");
-        $("#portfolio-content .rogers-pic").css("left", (-36+Hwindow*0.015)+"%");
-        $("#portfolio-content .rogers-pic2").css("left", (86+Hwindow*-0.015)+"%");
+        $("#portfolio-content .rogers-pic").css("margin-left", (-32+Hwindow*0.015)+"%");
+        $("#portfolio-content .rogers-pic2").css("margin-left", (84+Hwindow*-0.015)+"%");
        
 }
 
@@ -111,5 +110,14 @@ $(document).ready(function(){
         }
     }
     
+//The hidden menu must be must close after click in the links
+    $(document).ready(function(){
+        $("#nav-with-links a").click(function(){
+            $("#nav-with-links").toggleClass("nav-slide-left");
+            $("#nav-with-links li").fadeToggle(300);
+            $("#nav-toggle").toggleClass("activated");
+                
+            });
+    })
 
     

@@ -74,7 +74,7 @@ nav{
     margin: 0;
     left: 0; 
     position: fixed;
-    padding: 135px 0 0 0;
+    padding: 20vh 0 0 0;
     text-align: center;
     transition: .4s;
     background-color: #fff;
@@ -298,6 +298,9 @@ p.text2{
     transform: translateX(-50%);
     top: 38vh;
 }
+.toggle-bottom img{
+    transform: rotateX(150deg);
+}
 @keyframes upAndDown{
     0%{top: 38vh;}
     20%{top: 36vh;}
@@ -448,6 +451,7 @@ p.text2{
     height: 100%;
     margin-top: 140px;
     margin-left: 20%;
+    padding-bottom: 54px;
 }
 /** portfolio project 1 ***/
 #portfolio-content .img-holder{
@@ -457,38 +461,37 @@ p.text2{
 #portfolio-content .img-holder img{
     width: 100%;
     height: auto;
-    margin:  0 3% 39px;
+    margin:  0 3%;
     transform: rotateY(0deg);
     transform-origin: left;
     border-radius: 7px;
 }
+.subtitle-portfolio{
+    margin-top: 40px;
+}
+
 /** portfolio project 2 ***/
 #portfolio-content .img-holder2{
-    width: 100%;
-    height: 570px;
     perspective: 1200px;
     perspective-origin: right;
-    position: relative;
 }
 
 #portfolio-content .img-holder2 img{
-    margin: 110px 4% 70px;
     width: 55%;
     height: auto;
     display: inline-block;
     transform: rotateY(40deg);
     transform-origin: left;
     border-radius: 7px;
-    position: absolute;
 }
 .rogers-pic{
+    margin: 110px 0 0 8%;
 }
 .rogers-pic2{
-    top: 11%;
+    margin: -180px 10% 0 0;
 }
-.subtitle-portfolio{
-    position: absolute;
-    bottom: 0;
+.subtitle-portfolio2{
+    margin-top: 40px;
 }
 
 /****   PORTFOLIO DESKTOP VERSION DESIGN ****/
@@ -498,10 +501,11 @@ p.text2{
 /***  start the CONTACT ***/
 #contact{
     transition: 2s;
+    
 }
 #contact .contact-links h1{
     color: #efefef;
-    margin: 230px 8% 35px;
+    margin: 100px 8% 35px;
 }
 #contact .contact-links p{
     margin: 30px 0 5px 8%;
@@ -548,7 +552,7 @@ input:read-write, #message-form{
 }
 button{
     width: 30%;
-    margin: 20px auto 0;
+    margin: 20px auto;
     height: 42px;
     border-radius: 5px;
     color: #555;
@@ -557,9 +561,8 @@ button{
 }
 /***  social medias ***/
 
-
 .social-medias{
-    margin: 120px 0 0 0;
+    margin-top: 50px;
     width: 100%;
     height: 400px;
     text-align: center;

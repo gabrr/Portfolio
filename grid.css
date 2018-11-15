@@ -1,6 +1,6 @@
 .grid-container{
     display: grid;
-    grid-template: repeat( 10, 360px) / repeat(12, 1fr);
+    grid-template: repeat( 10, auto) / repeat(12, 1fr);
 }
 
 .grid-container > div {
@@ -11,11 +11,13 @@
 #about{
     grid-column: 1 / -1;
     grid-row: 1 / span 2;
+    padding-bottom: 120px;
 }
 .skills-section{
     background-image: linear-gradient(to bottom, #fff, #fff3f2);
     grid-column: 1 / -1;
     grid-row: 3 / span 2;
+    padding-bottom: 120px;
 }
 #portfolio{
     grid-column: 1 / -1;
@@ -29,7 +31,7 @@
 }
 #contact{
     grid-column: 1 / -1;
-    grid-row: 8 / span 3;
+    grid-row: 9 / span 2;
     background-color: #fff ;
 }
 
