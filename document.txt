@@ -164,6 +164,12 @@ It's 20:16.
 
 // It's 01:26 AM, 15.11.2018 I am gonna try to make the portfolio section today.
 
+// It's 4:17 AM I had to change the whole structure the portfolio, the elements were overlaping depending on display size. And it was impossible to make responsive with that setting, so I changed everything. I also changed the angle down on landing page, and solved the anchor links bug on the hidden menu. But I still have to optimize for the desktop version, but now it's so much easier.
+
+//It's 22:45  17.11.2018, I'm back to try make the portfolio page responsive for larger devices with lots of parallax effects.
+
+//It's 12:25 am, almost complete, I fixed last bugs I realized. and I set the portfolio layout for the desktop view. The portfolio it's not the most beautiful, but later I'll put attention on it.
+
 
 
 

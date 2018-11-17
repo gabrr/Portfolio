@@ -50,13 +50,21 @@ $(document).ready(function(){
             $("#about .circle-graphic").css("left", (-22+Hwindow*0.022)+"%");
         }
         
-        
-        
-        
         //parallax for the SECTION PORTFOLIO, it will make the images rotate
         $("#portfolio-content .img-holder img").css("transform", "rotateY("+ 10+Hwindow*0.027 +"deg)");
-        $("#portfolio-content .rogers-pic").css("margin-left", (-32+Hwindow*0.015)+"%");
-        $("#portfolio-content .rogers-pic2").css("margin-left", (84+Hwindow*-0.015)+"%");
+        $("#portfolio-content .rogers-pic").css("margin-left", (-34+Hwindow*0.015)+"%");
+        $("#portfolio-content .rogers-pic2").css("margin-left", (88+Hwindow*-0.013)+"%");
+        
+        
+        //parallax for the PORTFOLIO SECTION the 2nd project for desktop version
+        if(WidthWindow >= SmallDevicesW){
+            $("#portfolio-content .rogers-pic").css("margin-left", ( -14+Hwindow*0.015)+"%");
+            $("#portfolio-content .rogers-pic2").css("margin-left", (95+Hwindow*-0.013)+"%");
+        }
+        
+        
+        
+        
        
 }
 
@@ -114,10 +122,12 @@ $(document).ready(function(){
     $(document).ready(function(){
         $("#nav-with-links a").click(function(){
             $("#nav-with-links").toggleClass("nav-slide-left");
-            $("#nav-with-links li").fadeToggle(300);
+            if(window.innerWidth < 768){
+                $("#nav-with-links li").fadeToggle(300);
+            }    
             $("#nav-toggle").toggleClass("activated");
                 
-            });
+        });
     })
 
     
