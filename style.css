@@ -461,6 +461,7 @@ p.text2{
 #portfolio-content .img-holder{
     perspective: 1200px;
     perspective-origin: right;
+    padding-top: 35px;
 }
 #portfolio-content .img-holder img{
     width: 100%;
