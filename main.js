@@ -83,11 +83,11 @@ $(document).ready(function(){
         progressBar5 = document.getElementsByClassName("percentages-bar")[4];
     
         if(skillSection < triggleTop+200){
-        progressBar1.style = "width: 76%;"
-        progressBar2.style = "width: 64%;"
-        progressBar3.style = "width: 88%;"
-        progressBar4.style = "width: 71%;"
-        progressBar5.style = "width: 40%;"
+        progressBar1.style = "width: 94%;"
+        progressBar2.style = "width: 92%;"
+        progressBar3.style = "width: 97%;"
+        progressBar4.style = "width: 68%;"
+        progressBar5.style = "width: 51%;"
         } else if(skillSection+100 > triggleTop){
         progressBar1.style = "width: 35%;"
         progressBar2.style = "width: 35%;"
