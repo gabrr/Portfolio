@@ -1,58 +1,88 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
 }
-html, body{
+
+html,
+body {
     max-width: 100%;
 }
-/**  scroll bar styling  **/
-::-webkit-scrollbar {width: 6px;}
-::-webkit-scrollbar-track { }
-::-webkit-scrollbar-thumb {background: #999;}
-::-webkit-scrollbar-thumb:hover {background: #777;}
 
-/** disable scroll bar for small devices **/
-@media screen and(max-width:768px){
-    ::-webkit-scrollbar {width: 0;}
-    
+
+/**  scroll bar styling  **/
+
+::-webkit-scrollbar {
+    width: 6px;
 }
 
+::-webkit-scrollbar-track {}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+
+/** disable scroll bar for small devices **/
+
+@media screen and(max-width:768px) {
+     ::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+
 /**  font-family: 'ABeeZee', sans-serif;  **/
-h1, h2{
+
+h1,
+h2 {
     font-family: 'ABeeZee', sans-serif;
     font-weight: bolder;
 }
-p{
+
+p {
     font-family: 'ABeeZee', sans-serif;
     font-weight: lighter;
 }
 
+
 /*I am going to make the styles for mobile first and then the tablet and desktop version*/
-.hero{
+
+.hero {
     width: 100%;
     height: 100vh;
     background-image: url(img/img7.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: fixed;
     background-repeat: no-repeat;
 }
 
+
 /*the container the gets all the elements for mobile nav */
-nav{
+
+nav {
     position: relative;
     width: 100%;
     height: 60px;
 }
+
+
 /*the nav for DESKTOP*/
-@media screen and (min-width:768px){
-    nav{
+
+@media screen and (min-width:768px) {
+    nav {
         width: 100%;
     }
 }
 
+
 /*logo for mobile devices*/
-.logo{
+
+.logo {
     color: #555;
     position: absolute;
     font-size: 29px;
@@ -60,19 +90,24 @@ nav{
     margin: 15px;
     font-family: 'ABeeZee', sans-serif;
 }
+
+
 /*Logo for DESKTOP devices*/
-@media screen and (min-width:768px){
-    .logo{
+
+@media screen and (min-width:768px) {
+    .logo {
         margin: 26px 40px;
     }
 }
 
+
 /*the links styles for mobile devices is vertical*/
-.navbar-links{
+
+.navbar-links {
     width: 0;
     height: 100%;
     margin: 0;
-    left: 0; 
+    left: 0;
     position: fixed;
     padding: 20vh 0 0 0;
     text-align: center;
@@ -80,26 +115,30 @@ nav{
     background-color: #fff;
     z-index: 1;
 }
-.nav-slide-left{
+
+.nav-slide-left {
     width: 100%;
 }
 
-.navbar-links a{
+.navbar-links a {
     padding: 30px;
-    text-decoration:none;
+    text-decoration: none;
     font-size: 18px;
     font-family: 'ABeeZee', sans-serif;
     color: #555;
 }
-.navbar-links li{
+
+.navbar-links li {
     display: table;
     padding: 30px;
     display: none;
 }
 
+
 /*the navigation links for DESKTOP*/
-@media screen and (min-width:768px){
-    .navbar-links{
+
+@media screen and (min-width:768px) {
+    .navbar-links {
         width: 100%;
         height: 60px;
         padding: 0;
@@ -107,15 +146,15 @@ nav{
         background-color: transparent;
         z-index: 0;
     }
-    .navbar-links a{
+    .navbar-links a {
         font-size: 15px;
     }
-    .navbar-links li{
+    .navbar-links li {
         display: inline-block;
         padding: 36px 5px 15px 5px;
         position: relative;
     }
-    .navbar-links li::after{
+    .navbar-links li::after {
         position: absolute;
         content: "";
         width: 0;
@@ -125,7 +164,7 @@ nav{
         transition: .4s;
         background-color: red;
     }
-    .navbar-links li:hover::after{
+    .navbar-links li:hover::after {
         height: 5px;
         left: 50%;
         width: 4px;
@@ -134,9 +173,11 @@ nav{
         box-shadow: 1px 0px 1px 0.7px #ff0c0c;
     }
 }
-    
+
+
 /*the button the will open and close the menu with the links*/
-#nav-toggle{
+
+#nav-toggle {
     position: fixed;
     right: 0;
     top: 0;
@@ -147,7 +188,8 @@ nav{
     z-index: 2;
 }
 
-.bar1, .bar3{
+.bar1,
+.bar3 {
     width: 30px;
     height: 1.5px;
     padding-bottom: .5px;
@@ -155,26 +197,34 @@ nav{
     margin-bottom: 5px;
     transition: .6s;
 }
-.activated .bar1{
+
+.activated .bar1 {
     transform: rotate(-28deg) translate(1px, 4px);
 }
-.activated .bar3{
+
+.activated .bar3 {
     transform: rotate(207deg) translate(-1px, 5px);
 }
+
+
 /*removing the toggle on DESKTOP version*/
-@media screen and (min-width:768px){
-        #nav-toggle{
+
+@media screen and (min-width:768px) {
+    #nav-toggle {
         display: none;
-        }
+    }
 }
 
+
 /*The button Hire me for a direct e-mail is deactivated for mobile devices*/
-.contact-btn{
+
+.contact-btn {
     float: right;
     display: none;
 }
-@media screen and (min-width:768px){
-    .contact-btn{
+
+@media screen and (min-width:768px) {
+    .contact-btn {
         display: block;
         position: absolute;
         right: 0;
@@ -182,27 +232,30 @@ nav{
         margin: 35px;
         transition: 1s;
     }
-    .contact-btn a{
+    .contact-btn a {
         font-size: 15px;
         background-image: linear-gradient(to bottom, #bb0e0e, #ff0c0c);
         color: #efefef;
         padding: 9px 22px;
         text-decoration: none;
         font-family: 'ABeeZee', sans-serif;
-        border-radius: 50px;    
+        border-radius: 50px;
     }
-    .contact-btn a:hover{
+    .contact-btn a:hover {
         background-image: linear-gradient(#ff0c0c, #ff0c0c);
-        
     }
 }
+
+
 /**  THE TEXT OF THE HERO, MOBILE FIRST.  **/
-.hero-main-text{
+
+.hero-main-text {
     margin: 25vh 8%;
     text-align: left;
     position: relative;
 }
-.hero-main-text h1{
+
+.hero-main-text h1 {
     font-size: 50px;
     font-weight: 400;
     letter-spacing: -2px;
@@ -210,8 +263,10 @@ nav{
     font-family: 'ABeeZee', sans-serif;
 }
 
+
 /*** typing animation for mobile devices***/
-.auto-typing-effect{
+
+.auto-typing-effect {
     margin-left: 2px;
     width: min-content;
     display: flex;
@@ -219,7 +274,8 @@ nav{
     animation: blinking 500ms steps(40) infinite normal;
     position: relative;
 }
-.auto-typing-effect p{
+
+.auto-typing-effect p {
     margin: 0;
     font-size: 17px;
     color: #555;
@@ -229,68 +285,120 @@ nav{
     font-family: 'ABeeZee', sans-serif;
 }
 
-p.text1{
+p.text1 {
     animation: typewriter1 18s steps(40) infinite;
 }
-p.text2{
+
+p.text2 {
     animation: typewriter2 18s steps(40) infinite;
 }
 
-@keyframes blinking{
-    from{
+@keyframes blinking {
+    from {
         border-right-color: #555;
-    } to{
+    }
+    to {
         border-right-color: transparent;
     }
 }
-@keyframes typewriter1{
-    0% {width: 0;}
-    10% {width: 0;}
-    40% {width: 170px;}
-    47% {width: 170px;}
-    55%{width: 0;}
-    100% {width: 0;}
-}
-@keyframes typewriter2{
-    0% {width: 0;}
-    60% {width: 0;}
-    76%{ width: 170px;}
-    88%{width: 170px;}
-    100% {width: 0;}
+
+@keyframes typewriter1 {
+    0% {
+        width: 0;
+    }
+    10% {
+        width: 0;
+    }
+    40% {
+        width: 170px;
+    }
+    47% {
+        width: 170px;
+    }
+    55% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
 }
 
+@keyframes typewriter2 {
+    0% {
+        width: 0;
+    }
+    60% {
+        width: 0;
+    }
+    76% {
+        width: 170px;
+    }
+    88% {
+        width: 170px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+
 /***   The text for .hero text,  &&   TYPIING  "DESKTOP VERSION"   ***/
-@media only screen and (min-width: 768px){
-    .hero-main-text{
+
+@media only screen and (min-width: 768px) {
+    .hero-main-text {
         margin-top: 21vh;
         text-align: center;
     }
-    .auto-typing-effect{
+    .auto-typing-effect {
         margin: 15px 0 0 33.5vw;
     }
-    .auto-typing-effect p{
+    .auto-typing-effect p {
         font-size: 21px;
     }
-    
     /** the typewriter effect has diffrent sets for larger devices**/
-    @keyframes typewriter1{
-    0% {width: 0;}
-    10% {width: 0;}
-    40% {width: 205px;}
-    47% {width: 205px;}
-    55%{width: 0;}
-    100% {width: 0;}
-}
-    @keyframes typewriter2{
-        0% {width: 0;}
-        60% {width: 0;}
-        76%{ width: 203px;}
-        88%{width: 203px;}
-        100% {width: 0;}
+    @keyframes typewriter1 {
+        0% {
+            width: 0;
+        }
+        10% {
+            width: 0;
+        }
+        40% {
+            width: 205px;
+        }
+        47% {
+            width: 205px;
+        }
+        55% {
+            width: 0;
+        }
+        100% {
+            width: 0;
+        }
+    }
+    @keyframes typewriter2 {
+        0% {
+            width: 0;
+        }
+        60% {
+            width: 0;
+        }
+        76% {
+            width: 203px;
+        }
+        88% {
+            width: 203px;
+        }
+        100% {
+            width: 0;
+        }
     }
 }
+
+
 /*****  THE UP ANGLE  ******/
-.toggle-bottom{
+
+.toggle-bottom {
     position: absolute;
     width: 50px;
     left: 50%;
@@ -298,43 +406,63 @@ p.text2{
     transform: translateX(-50%);
     top: 38vh;
 }
-.toggle-bottom img{
+
+.toggle-bottom img {
     transform: rotateX(150deg);
 }
-@keyframes upAndDown{
-    0%{top: 38vh;}
-    20%{top: 36vh;}
-    30%{top: 38vh;}
-    100%{top: 38vh;}
+
+@keyframes upAndDown {
+    0% {
+        top: 38vh;
+    }
+    20% {
+        top: 36vh;
+    }
+    30% {
+        top: 38vh;
+    }
+    100% {
+        top: 38vh;
+    }
 }
 
 
 /** what is default is going to be set in here **/
-.grid-container{
+
+.grid-container {
     color: #555;
     font-size: 1.1em;
 }
-.grid-container p{
+
+.grid-container p {
     text-align: left;
     font-size: 16px;
     letter-spacing: .15px;
     word-spacing: .1px;
 }
+
+
 /***   start the sections in the grid container ****/
-#about h1{
+
+#about h1 {
     margin: 120px 0 20px 8%;
 }
-#about p{
+
+#about p {
     margin: 0 8%;
     width: 84%;
 }
-#about{
+
+#about {
     position: relative;
     max-width: 100%;
     overflow: hidden;
 }
+
+
 /*** circle design ***/
-#about .circle-graphic{
+
+#about .circle-graphic {
     height: 360px;
     width: 380px;
     left: -36%;
@@ -343,8 +471,11 @@ p.text2{
     border-radius: 100%;
     background-color: rgba(255, 0, 0, .05);
 }
+
+
 /** image profile from about**/
-#about img{
+
+#about img {
     width: 75%;
     height: auto;
     border-radius: 100%;
@@ -354,9 +485,11 @@ p.text2{
     margin-left: 65%;
 }
 
+
 /*** ABOUT  design DESKTOP VERSION ***/
-@media screen and (min-width:768px){
-    #about .circle-graphic{
+
+@media screen and (min-width:768px) {
+    #about .circle-graphic {
         height: 903px;
         width: 1000px;
         left: -36%;
@@ -365,43 +498,51 @@ p.text2{
         border-radius: 100%;
         background-color: rgba(255, 0, 0, .05);
     }
-    #about h1{
-    margin: 160px 0 20px 8%;
+    #about h1 {
+        margin: 160px 0 20px 8%;
     }
-    #about p{
+    #about p {
         width: 43%;
     }
-    #about img{
+    #about img {
         max-width: 24%;
         margin-top: -50px;
     }
 }
 
+
 /** starts the SKILLS SECTION  ***/
-.skills-section h1{
+
+.skills-section h1 {
     margin: 80px 0 60px 8%;
 }
-.skills-section p{
+
+.skills-section p {
     font-size: 12px;
     margin-left: 8%;
 }
+
+
 /* the percentages bars */
-.out-percentage-bar{
+
+.out-percentage-bar {
     position: relative;
-    width:  86%;
+    width: 86%;
     height: 20px;
     margin: 10px auto 40px;
     border-radius: 30px;
     background-color: rgba(255, 0, 0, .05);
 }
-.out-percentage-bar p{
+
+.out-percentage-bar p {
     text-align: right;
     font-size: 11px;
     position: absolute;
     right: 8px;
     top: 21%;
 }
-.percentages-bar{
+
+.percentages-bar {
     position: absolute;
     width: 35%;
     height: 20px;
@@ -411,43 +552,53 @@ p.text2{
     background-image: linear-gradient(to bottom, #ff8a7f, #ff8a7f);
     transition: 1s all;
 }
+
+
 /*** SKILLS SECTION the desktop version **/
-@media screen and (min-width:768px){
-    .skills-section h1{
+
+@media screen and (min-width:768px) {
+    .skills-section h1 {
         margin: 80px 0 60px 20%;
-}
-    .skills-section p{
+    }
+    .skills-section p {
         margin-left: 20%;
     }
-    .out-percentage-bar{
+    .out-percentage-bar {
         width: 60%;
     }
 }
 
 
 /****  Starts the PORTFOLIO SECTION  ****/
-#portfolio{
+
+#portfolio {
     transition: 2s;
     color: #efefef;
     overflow: hidden;
 }
-#portfolio a{
+
+#portfolio a {
     text-decoration: none;
     color: #efefef;
 }
-#portfolio img{
+
+#portfolio img {
     filter: grayscale(100%) brightness(97%);
 }
-#portfolio h1{
+
+#portfolio h1 {
     margin: 130px 8% 0;
 }
-#portfolio h2{
+
+#portfolio h2 {
     font-size: 20px;
 }
-#portfolio p{
+
+#portfolio p {
     font-size: 13px;
 }
-#portfolio-content{
+
+#portfolio-content {
     overflow: hidden;
     opacity: 0;
     transition: 1.3s;
@@ -457,30 +608,37 @@ p.text2{
     margin-left: 20%;
     padding-bottom: 54px;
 }
+
+
 /** portfolio project 1 ***/
-#portfolio-content .img-holder{
+
+#portfolio-content .img-holder {
     perspective: 1200px;
     perspective-origin: right;
     padding-top: 35px;
 }
-#portfolio-content .img-holder img{
+
+#portfolio-content .img-holder img {
     width: 100%;
     height: auto;
     transform: rotateY(0deg);
     transform-origin: left;
     border-radius: 7px;
 }
-.subtitle-portfolio{
+
+.subtitle-portfolio {
     margin-top: 40px;
 }
 
+
 /** portfolio project 2 ***/
-#portfolio-content .img-holder2{
+
+#portfolio-content .img-holder2 {
     perspective: 1200px;
     perspective-origin: right;
 }
 
-#portfolio-content .img-holder2 img{
+#portfolio-content .img-holder2 img {
     width: 55%;
     height: auto;
     display: inline-block;
@@ -488,99 +646,111 @@ p.text2{
     transform-origin: left;
     border-radius: 7px;
 }
-.rogers-pic{
+
+.rogers-pic {
     margin: 110px 0 0 8%;
 }
-.rogers-pic2{
+
+.rogers-pic2 {
     margin: -180px 10% 0 0;
 }
-.subtitle-portfolio2{
+
+.subtitle-portfolio2 {
     margin-top: 40px;
 }
 
+
 /****   PORTFOLIO DESKTOP VERSION DESIGN ****/
-@media screen and (min-width: 768px){
-    #portfolio-content .img-holder img{
+
+@media screen and (min-width: 768px) {
+    #portfolio-content .img-holder img {
         margin: 10%;
         width: 80%;
     }
-    .subtitle-portfolio{
+    .subtitle-portfolio {
         margin-top: 20vh;
         width: 80%;
     }
     /** portfolio project 2 **/
-    #portfolio-content .img-holder2{
+    #portfolio-content .img-holder2 {}
+    #portfolio-content .img-holder2 img {
+        width: 40%;
     }
-
-    #portfolio-content .img-holder2 img{
-       width: 40%;
-    }
-    .rogers-pic{
-    }
-    .rogers-pic2{
+    .rogers-pic {}
+    .rogers-pic2 {
         margin: -220px 10% 0 0;
     }
-    .subtitle-portfolio2{
+    .subtitle-portfolio2 {
         margin-top: 36vh;
         width: 80%;
-        
     }
 }
 
 
 /***  start the CONTACT ***/
-#contact{
+
+#contact {
     transition: 2s;
-    
 }
-#contact .contact-links h1{
+
+#contact .contact-links h1 {
     color: #efefef;
     margin: 100px 8% 35px;
 }
-#contact .contact-links p{
+
+#contact .contact-links p {
     margin: 30px 0 5px 8%;
     color: #666;
 }
-#contact a{
+
+#contact a {
     font-size: 20px;
     padding: 10px 0 20px;
     margin-left: 8%;
     color: #efefef;
     text-decoration: none;
 }
+
+
 /*****   starts the FORM FOR CONTACTS  ******/
 
-#contact-form{
+#contact-form {
     margin-top: 50px;
     text-align: center;
 }
-input:read-write, #message-form{
+
+input:read-write,
+#message-form {
     padding-left: 10px;
     color: #888;
     font-size: 15px;
 }
-#text-form{
+
+#text-form {
     width: 84%;
     height: 40px;
     margin: 5px auto;
     border-radius: 5px;
     background-color: #222;
 }
-#email-form{
+
+#email-form {
     width: 84%;
     height: 40px;
     margin: 5px auto;
-    border-radius:  5px;
+    border-radius: 5px;
     background-color: #222;
 }
-#message-form{
+
+#message-form {
     width: 84%;
     height: 150px;
     margin: 5px auto;
     border-radius: 7px;
     background-color: #222;
 }
-button{
+
+button {
     width: 30%;
     margin: 20px auto;
     height: 42px;
@@ -589,64 +759,64 @@ button{
     font-size: 14px;
     background-color: #efefef;
 }
+
+
 /*** form for the DESKTOP VERSION ***/
-@media screen and (min-width: 768px){
-    #contact-form{
+
+@media screen and (min-width: 768px) {
+    #contact-form {
         text-align: left;
         margin: 60px 0 0 8%;
         width: 64%;
     }
-    #text-form{
+    #text-form {
         width: 36%;
     }
-    #email-form{
+    #email-form {
         width: 36%;
     }
-    #message-form{
+    #message-form {
         width: 73%;
     }
-    button{
+    button {
         width: 20%;
         display: block;
         margin: 20px 0 20px 0;
     }
 }
 
+
 /***  social medias ***/
 
-.social-medias{
+.social-medias {
     margin-top: 50px;
     width: 100%;
     height: 400px;
     text-align: center;
     background-color: #efefef;
 }
-.social-medias a{
+
+.social-medias a {
     margin: 15px;
     padding: 15px;
     color: #555;
 }
-.links-social-medias li{
+
+.links-social-medias li {
     display: inline-block;
 }
-.links-social-medias{
+
+.links-social-medias {
     margin: 50px auto 0;
-    
 }
+
 
 /***  FOOTER  ***/
 
-.footer p{
+.footer p {
     text-align: center;
     margin: 30px auto 5px;
     padding: 0;
     width: 84%;
     font-size: 15px;
 }
-
-
-
-
-
-
-
