@@ -636,6 +636,7 @@ p.text2 {
 #portfolio-content .img-holder2 {
     perspective: 1200px;
     perspective-origin: right;
+    margin-bottom: 50px;
 }
 
 #portfolio-content .img-holder2 img {
