@@ -636,7 +636,6 @@ p.text2 {
 #portfolio-content .img-holder2 {
     perspective: 1200px;
     perspective-origin: right;
-    margin-bottom: 50px;
 }
 
 #portfolio-content .img-holder2 img {
@@ -657,7 +656,7 @@ p.text2 {
 }
 
 .subtitle-portfolio2 {
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 
