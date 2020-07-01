@@ -1,5 +1,5 @@
-# Dicussion
-### Scenarios
+# Discussão
+### Cenários
 
 1. Quando ligamos a estacao e recebemos qualquer erro.
 - **Deve:** Mostrar modal e o botao de ligar deve aparecer novamente.
